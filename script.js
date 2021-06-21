@@ -3,6 +3,7 @@ const btnSend = document.querySelectorAll('button')[0]
 const form = document.querySelector('form')
 const input1 = document.querySelectorAll('input')[0]
 const input2 = document.querySelectorAll('input')[1]
+const input3 = document.querySelectorAll('input')[2]
 
 // 1ere fonction
 
@@ -12,7 +13,7 @@ btnCancel.addEventListener('click', function() {
 
 })
 
-// 1ere fonction
+// 2eme fonction
 
 form.addEventListener('submit', function (evt) {
     evt.preventDefault() //empeche de rafraichir
@@ -21,8 +22,9 @@ form.addEventListener('submit', function (evt) {
     $('section').append(`
     <div class="card mt-3">
       <div class="card-body">
-        <p class="card-text">${input2.value} - ${input1.value}</p>
+        <p class="card-text"><span style="color:${input3.value}">${input2.value}</span> - ${input1.value}</p>
       </div>
     </div>
     `)
   })  
+
